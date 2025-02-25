@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out;
+        }
+        .login-button:hover {
+            background: linear-gradient(135deg, #5563c1, #5d3d91);
+        }
+        .reset-link {
+            display: block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .reset-link:hover {
+            text-decoration: underline;
+        }
+        .social-login {
+            margin-top: 20px;
+        }
+        .social-login button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .google-login {
+            background: #db4437;
+            color: white;
+        }
+        .facebook-login {
+            background: #3b5998;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="email" class="input-field" placeholder="Enter your email" required>
+            <input type="password" class="input-field" placeholder="Enter your password" required>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <a href="/reset" class="reset-link">Forgot your password?</a>
+        <div class="social-login">
+            <button class="google-login">Login with Google</button>
+            <button class="facebook-login">Login with Facebook</button>
+        </div>
+    </div>
+</body>
+</html>
